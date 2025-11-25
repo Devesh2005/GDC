@@ -194,11 +194,9 @@ window.funcontact = () => {
     ) {
       event.preventDefault();
     }
-  });
 
-  // Disable right click
-//   document.addEventListener('contextmenu', e => e.preventDefault());
-// });
+  document.addEventListener('contextmenu', e => e.preventDefault());
+});
 
 let lastScroll = 0;
 const navbar = document.querySelector('.nav');
