@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Colour theme is subjectable to change */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.nav {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px;
+    background-color: #102E50;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    z-index: 9999;
+    transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Hidden during scroll down */
+.nav.hide {
+    transform: translate(-50%, -150%);
+    opacity: 0;
+}
+
+/* Full navbar glow */
+.nav-glow {
+    animation: navGlow 2s ease-in-out;
+}
+
+@keyframes navGlow {
+    0% {
+        box-shadow: 0 0 10px #ff00ff, 0 0 20px #00e5ff;
+    }
+    50% {
+        box-shadow: 0 0 20px #00f7ff, 0 0 40px #ff00ff;
+    }
+    100% {
+        box-shadow: none;
+    }
+}
+
+
+
+
+.logo {
+    font-size: 28px;
+    font-family: "Edu QLD Hand", cursive;
+    font-weight: 700;
+    margin-left: 50px;
+    background: url('https://www.bing.com/th/id/OGC.40c9ddb8a50365fb017ea091d862e5cb?r=0&o=7&pid=1.7&rm=3&rurl=http%3a%2f%2f2.bp.blogspot.com%2f-zrgybDrZDbg%2fU20q8l1HfjI%2fAAAAAAAAF5M%2fvlum83jvBQE%2fs1600%2fFire%2b1.gif&ehk=6KPOy8rpMhQf%2f6hFz3D%2b0sSQxiJwrLnYO2%2boushgtGQ%3d');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: 0 0;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: moveBackground 5s linear infinite;
+    filter: brightness(3) contrast(2);
+}
+
+
+
+/* Moves background to make it feel dynamic inside text */
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Glow animation class (triggered on click) */
+.glow-fade {
+    animation: glowEffect 3s ease-in-out forwards;
+}
+
+@keyframes glowEffect {
+    0% {
+        text-shadow: 0 0 10px rgb(174, 0, 255), 0 0 20px rgb(2, 78, 108);
+    }
+
+    50% {
+        text-shadow: 0 0 15px rgb(0, 208, 255), 0 0 25px rgb(65, 65, 2);
+    }
+
+    100% {
+        text-shadow: none;
+    }
+}
+
+
+
+
+.menu {
+    display: flex;
+    gap: 25px;
+    margin-right: 50px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #ffffffd6;
+}
+
+.menu a:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 4.5%;
+    padding-top: 120px; /* pushes hero below floating navbar */
+}
+
+
+
+.hero-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-container .content {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+.name {
+    font-size: 26px;
+    color: #102E50;
+}
+
+.role {
+    font-size: 50px;
+    color: #af60ff;
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.ov {
+    line-height: 180%;
+    color: #102E50;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif
+}
+
+.hero-container .profile {
+    flex: 2;
+}
+
+.profile img {
+    float: right;
+}
+
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px 0px;
+    height: 100vh;
+    background-color: #102E50;
+    color: #fff;
+    background-image: url(assets/combined.jpg);
+    background-repeat: repeat;
+    animation: marquee 20s infinite linear;
+    box-shadow:
+        0 0 1px 3px #32425547,
+        0 0 7px 7px #102E50;
+}
+
+.p-header {
+    margin: 10px;
+}
+
+.p-header h2 {
+    font-family: "Edu QLD Hand", cursive;
+    font-size: 26px;
+    margin: 15px 30px;
+
+}
+
+.gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 100%;
+    margin: 10px;
+}
+
+@keyframes marquee {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: -1190px;
+    }
+}
+
+.gallery img {
+    max-width: 450px;
+    max-height: 350px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    opacity: 0.7;
+}
+
+.gallery img:hover {
+    transform: scale(1.69);
+    z-index: 1000;
+    opacity: 1;
+    box-shadow:
+        0 0 1px 3px #ebeccac9,
+        0 0 7px 7px #892be2be;
+        
+}
+
+.services {
+    box-shadow:
+        0 0 1px 3px #32425547,
+        0 0 7px 7px #102E50;
+    height: 33vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px 0px 0px;
+    background-color: #102E50;
+    color: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%233498db' fill-opacity='0.45'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+    animation: marquee 45s infinite reverse;
+}
+
+.s-header {
+    margin: 10px;
+
+}
+
+.s-header h2 {
+    font-family: "Edu QLD Hand", cursive;
+    font-size: 33px;
+    color: #f6f7f9;
+    margin: 15px 30px;
+    display: flex;
+    justify-content: left;
+}
+
+.services p {
+    text-align: center;
+}
+
+.services a {
+    color: rgb(5, 181, 240)
+}
+
+.contact {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%233498db' fill-opacity='0.45'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+    animation: marquee 45s infinite reverse;
+    background-color: #102E50;
+    color: #fff;
+
+}
+
+.c-header h2 {
+    font-family: "Edu QLD Hand", cursive;
+    font-size: 33px;
+    color: #fefeff;
+    margin: 15px 30px;
+    display: flex;
+    justify-content: left;
+}
+
+.contact form {
+    max-width: 10000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.contact form input,
+.contact form textarea {
+    padding: 10px;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200%;
+    resize: none;
+}
+
+.contact form button {
+    background: #038df7;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.contact form button:hover {
+    background: #3702f7;
+    transform: scale(1.1);
+    transition: transform 0.3;
+    z-index: 1000;
+    opacity: 1;
+    box-shadow:
+        0 0 1px 3px #3a3b28c9,
+        0 0 7px 7px #63398abe;
+}

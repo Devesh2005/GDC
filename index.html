@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Darshan's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+
+
+<body>
+    <div class="nav">
+        <div class="logo">Darshan.</div>
+        <div class="menu">
+            <a onclick="funhome()">Home</a>
+            <a href='#' id="about" onclick="funabout()">About</a>
+            <a href="#portfolio" onclick="funworks()">Works</a>
+            <a href="#services" onclick="funservices()">Services</a>
+            <a href="#contact" onclick="funcontact()">Contact</a>
+        </div>
+    </div>
+
+    <div class="hero" id="hero">
+        <div class="hero-container">
+            <div class="content">
+                <h2 class="name">Hi, I am Darshan N!</h2>
+                <h1 class="role">Graphic Designer</h1>
+                <p class="ov">
+                    As a passionate graphic designer, I specialize in crafting meaningful brand identities, stunning
+                    digital
+                    experiences, and eye-catching visuals that leave a lasting impression.
+                    From sleek typography to vibrant illustrations, I blend creativity with strategy to turn concepts
+                    into
+                    reality. Whether it's branding, UI/UX, or print media, my goal is simple: to transform ideas into
+                    designs that resonate.
+                </p>
+            </div>
+            <div class="profile">
+                <img src="./assets/image-removebg-preview.png"></img>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio" id="portfolio">
+        <div class="p-header">
+            <h2 class="works">My Works</h2>
+        </div>
+        <div class="gallery">
+            <img src="assets/Screenshot 2024-11-08 195425.png">
+            <img src="assets/Screenshot 2024-11-08 195458.png">
+            <img src="assets/Screenshot 2024-11-08 195520.png">
+            <img src="assets/Screenshot 2024-11-08 195722.png">
+        </div>
+    </div>
+
+    <div class="services" id="services">
+        <div class="s-header">
+            <h2 class="service">Services</h2>
+        </div>
+        <p>I offer a variety of design services to meet your needs, including branding, illustration, and web design.
+        </p>
+        <p><i>(+91 82489 83581)</i></p>
+        <p><b>Instagram:</b><a
+                href="https://www.instagram.com/_elixter_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">@Elixter</a>
+        </p>
+        <br><br>
+    </div>
+    <div class="contact" id="contact">
+        <div class="c-header">
+            <h2 class="contacts">Contact</h2>
+        </div>
+        <form id="contact-form">
+            <input type="text" name="from_name" placeholder="Your Name" required />
+            <input type="email" name="reply_to" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+
+        <p id="confirmationMessage" style="display: none; color: green;">Thank you! Your message has been sent.</p>
+
+
+    </div>
+
+     <script type="module" src="script.js"></script>
+
+</body>
+
+</html>
