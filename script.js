@@ -185,18 +185,19 @@ window.funcontact = () => {
     }, 2100);
   }
 };
-  // Disable inspect keys
-  document.addEventListener('keydown', function (event) {
-    if (
-      event.key === "F12" ||
-      (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J')) ||
-      (event.ctrlKey && event.key === 'U')
-    ) {
-      event.preventDefault();
-    }
-
-  document.addEventListener('contextmenu', e => e.preventDefault());
+  /// Disable inspect keys
+document.addEventListener("keydown", function (event) {
+  if (
+    event.key === "F12" ||
+    (event.ctrlKey && event.shiftKey && (event.key === "I" || event.key === "J")) ||
+    (event.ctrlKey && event.key === "U")
+  ) {
+    event.preventDefault();
+  }
 });
+
+// Disable right-click
+document.addEventListener("contextmenu", (e) => e.preventDefault());
 
 let lastScroll = 0;
 const navbar = document.querySelector('.nav');
